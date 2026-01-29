@@ -4,11 +4,19 @@ public class FollowPlayer : MonoBehaviour
 {
 
     public Transform player;
-    public Vector3 offset;
+    public Vector3 thirdPersonOffset;
+    public Vector3 firstPersonOffset;
+    private bool isFirstPerson = false;
+    
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        transform.position = player.position + offset;
+        Vector3 activeOffset = isFirstPerson ? firstPersonOffset : thirdPersonOffset;
+        transform.position = player.position + activeOffset;
+    }
+    public void SetFirstPerson(bool value)
+    {
+        isFirstPerson = value;
     }
 }
