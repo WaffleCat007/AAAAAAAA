@@ -3490,7 +3490,7 @@ PrefabInstance:
       objectReference: {fileID: 30723050}
     - target: {fileID: 765242857597461414, guid: af597faa2428ffd409aa8b5d3e9aa25a, type: 3}
       propertyPath: thirdPersonOffset.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 765242857597461414, guid: af597faa2428ffd409aa8b5d3e9aa25a, type: 3}
       propertyPath: thirdPersonOffset.z
