@@ -6,9 +6,13 @@ public class PlayerMovement : MonoBehaviour
     public float forwardForce = 2000f;
     public float sidewaysForce = 500f;
     public float backwardsForce = 300f;
+    public Level5Mech invertion;
+   
 
-
-
+    void Start()
+    {
+        invertion.SecretMech(false);
+    }
 
 
     // Update is called once per frame
@@ -33,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         {
             FindFirstObjectByType<GameManager>().gameOver();
         }
+        
 
 
     }
