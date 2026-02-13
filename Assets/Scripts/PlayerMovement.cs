@@ -28,11 +28,6 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
-        if (Input.GetKey("s"))
-        {
-            rb.AddForce(0, 0, backwardsForce * Time.deltaTime - forwardForce * Time.deltaTime);
-
-        }    
         if (rb.position.y < -1f)
         {
             FindFirstObjectByType<GameManager>().gameOver();
